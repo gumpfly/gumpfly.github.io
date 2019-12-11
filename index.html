@@ -296,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/25/c/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Li Yangang">
@@ -315,7 +315,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/25/c/" itemprop="url">c</a></h1>
+                <a class="post-title-link" href="/2019/03/30/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-25T11:28:19+08:00">
-                2018-10-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T17:31:54+08:00">
+                2019-03-30
               </time>
             
 
@@ -347,414 +347,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/10/25/c/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/10/25/c/" class="cy_cmt_count" data-xid="2018/10/25/c/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="固定分配数组两种方式">固定分配数组两种方式</h2>
-<h3 id="常量">1.常量</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const int M=100;</span><br><span class="line">const int N=200;</span><br><span class="line">int arr[M][N];</span><br></pre></td></tr></table></figure>
-<h3 id="宏定义">2.宏定义</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#define M 100</span><br><span class="line">#define N 200</span><br><span class="line">int arr[M][N]</span><br></pre></td></tr></table></figure>
-<h2 id="动态分配数组两种方式">动态分配数组两种方式</h2>
-<h3 id="二维数组内的空间不连续">1.二维数组内的空间不连续</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int M=100;</span><br><span class="line">int N=200;</span><br><span class="line">int **arr=new int*[M];</span><br><span class="line">for(int i=0;i&lt;M;i++)</span><br><span class="line">	arr[i]=new int[N];</span><br></pre></td></tr></table></figure>
-<p>释放数组内存代码： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(int i=0;i&lt;M;i++)</span><br><span class="line">	delete [] arr[i];</span><br><span class="line">delete [] arr;</span><br></pre></td></tr></table></figure></p>
-<h3 id="二维数组存放在一组连续空间内">2.二维数组存放在一组连续空间内</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int M=100;</span><br><span class="line">int N=200;</span><br><span class="line">int **arr = new int*[M];</span><br><span class="line">int *buffer=new int[M*N];</span><br><span class="line">for(int i=0;i&lt;M;i++)</span><br><span class="line">	arr[i]=buffer+i*N;</span><br></pre></td></tr></table></figure>
-<p>释放数组内存代码： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">delete [] buffer;</span><br><span class="line">delete [] arr;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/05/EM-algorithm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Yangang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gumpfly's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/05/EM-algorithm/" itemprop="url">EM algorithm</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-05T16:44:10+08:00">
-                2018-09-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/09/05/EM-algorithm/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/09/05/EM-algorithm/" class="cy_cmt_count" data-xid="2018/09/05/EM-algorithm/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="the-em-algorithm">The EM algorithm</h2>
-<p>Suppose we have an estimation problem in which we have a training set <span class="math inline">\(\{x^{(1)},\cdots,x^{(m)}\}\)</span> consisting of <span class="math inline">\(m\)</span> independent examples. We wish to fit parameters of a model <span class="math inline">\(p(x,z)\)</span> to the data, where the likelihood is given by</p>
-<p><span class="math display">\[
-\begin{align*}
-L(\theta)&amp;=log\prod_i^m p(x^{(i)};\theta\\
-&amp;=\sum_{i=1}^m logp(x^{(i)};\theta)\\
-&amp;=\sum_{i=1}^m log\sum_{z^{(i)}} p(x^{(i)},z^{(i)};\theta)
-\end{align*}
-\]</span></p>
-<p>But, explicitly finding the maximum likelihood estimates of the parameters <span class="math inline">\(\theta\)</span> may be hard. Here, the <span class="math inline">\(z^{(i)}\)</span>'s are the latent random variables; and it is often the case that if the <span class="math inline">\(z^{(i)}\)</span>'s were observed, then maximum likelihood estimation would be easy. In such a setting, the EM algorithm gives an efficient method for maximum likelihood estimation. Maximizing <span class="math inline">\(l(\theta)\)</span> explicitly might be difficult, and our strategy will be instead repeatedly construct a lower-bound on <span class="math inline">\(l(\theta)\)</span> (E-step), and then optimize that lower-bound (M-step). For each <span class="math inline">\(i\)</span>, let <span class="math inline">\(Q_i\)</span> be some distribution over the <span class="math inline">\(z\)</span>'s (<span class="math inline">\(\sum_z Q_i(z)=1,Q_i(z)\ge 0\)</span>).Consider the following:</p>
-<p><span class="math display">\[
-\begin{align}
-L(\theta)&amp;=\sum_{i=1}^mlog\sum_{z^{(i)}}p(x^{(i)},z^{(i)};\theta)\\
-&amp;=\sum_{i=1}^mlog\sum_{z^{(i)}}Q_i(z^{(i)})\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)}}\\
-&amp;\ge\sum_{i=1}^m\sum_{z^{(i)}}Q_i(z^{(i)})log\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)}}
-\end{align}
-\]</span></p>
-<p>The last step of this derivation used Jensen's inequality. Specially, <span class="math inline">\(f(x)=log(x)\)</span> is a convave function, since <span class="math inline">\(f^{&#39;&#39;}(x)=-1/x^2 &lt; 0\)</span> over its domain <span class="math inline">\(x \in \Re^+\)</span>. Also, the term</p>
-<p><span class="math display">\[\sum_{z^{(i)}}Q_i(z^{(i)})\left[\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)}}\right]\]</span></p>
-<p>in the summation is just an expectation of the quantity <span class="math inline">\([p(x^{(i)},z^{(i)};\theta)/Q_i(z^{(i)})]\)</span>with respect to <span class="math inline">\(z^{(i)}\)</span> drawn according to the distrubtion given by <span class="math inline">\(Q_i\)</span>. By Jensen's inequality, we have</p>
-<p><span class="math display">\[f\left(E_{z^{(i)}\sim Q_i}\left[\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})}\right]\right)\ge E_{z^{(i)}\sim Q_i}\left[f\left(\frac{p(x^{(i)}),z^{(i)};\theta}{Q_i(z^{(i)})}\right)\right]\]</span></p>
-<p>where the &quot;<span class="math inline">\(z^{(i)}\sim Q_i\)</span>&quot; subscripts above indicate that the expectations are with respect to <span class="math inline">\(z^{i}\)</span> drawn from <span class="math inline">\(Q_i\)</span>. This allowed us to go from Equation(2) to Equation(3). Now for any of distributions <span class="math inline">\(Q_i\)</span> the formula (3) gives a lower-bound on <span class="math inline">\(l(\theta)\)</span>. There're many possible choices for the <span class="math inline">\(Q_i\)</span>'s. Which should we choose? Well, if we have some current guess <span class="math inline">\(\theta\)</span> of the parameters, it seems natural to try to make the lower-bound tight at that value of <span class="math inline">\(\theta\)</span>. I.e., we'll make the inequality above hold with equality at our particular value of <span class="math inline">\(\theta\)</span>. (We'll see later how this enables us to prove that <span class="math inline">\(l(\theta)\)</span> increase monotonically with successive iterations of EM.) To make the bound tight for a particular value of <span class="math inline">\(\theta\)</span>, we need for the step involving Jensen's inequality in our derivation above to hold with equality. For this to be true, we know it is sufficient that the expectation be taken over a &quot;constant&quot;-valued random variable. I.e., we require that</p>
-<p><span class="math display">\[\frac{p(x^{(i)}),z^{(i)};\theta}{Q_i(z^{(i)})}=c\]</span></p>
-<p>for some constant <span class="math inline">\(c\)</span> that does not depend on <span class="math inline">\(z^{i}\)</span>. This is easily accomplished by choosing</p>
-<p><span class="math display">\[Q_i(z^{(i)})\propto p(x^{(i)},z^{(i)};\theta)\]</span></p>
-<p>Actually, since we know <span class="math inline">\(\sum_z Q_i(z^{(i)})=1\)</span> (because it is a distribution), this further tells us that</p>
-<p><span class="math display">\[
-\begin{align*}
-Q_i(z^{i})&amp;=\frac{p(x^{(i)},z^{(i)};\theta)}{\sum_z p(x^{(i)},z^{(i)};\theta)}\\
-&amp;=\frac{p(x^{(i)},z^{(i)};\theta)}{p(x^{(i)};\theta)}\\
-&amp;=p(z^{(i)}|x^{(i)};\theta)
-\end{align*}
-\]</span></p>
-<p>Thus, we simply set the <span class="math inline">\(Q_i\)</span>'s to be the posterior distribution of the <span class="math inline">\(z^{(i)}\)</span>'s given <span class="math inline">\(x^{(i)}\)</span> and the setting of the parameters <span class="math inline">\(\theta\)</span>. Now, for this choice of the <span class="math inline">\(Q_i\)</span>'s, Equation(3) gives a lower-bound on the loglikelihood <span class="math inline">\(l\)</span> that we're trying to maximize. This is the E-step. In the M-step of the algorithm, we then maximize our formula in Equation (3) with respect to the parameters to obtain a new setting of the <span class="math inline">\(\theta\)</span>'s. Repeatedly carrying out these steps gives us the EM algorithm, which is as follows: Repeat until convergence{<br>
-(E-step) For each <span class="math inline">\(i\)</span>, set <span class="math display">\[Q_i(z^{(i)}):=p(z^{(i)}|x^{(i)};\theta)\]</span> (M-step) Set <span class="math display">\[\theta := \mathop{\arg\max}_{\theta} \sum_i \sum_{z^{(i)}} Q_i(z^{(i)})log\frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})}\]</span><br>
-}<br>
-How we know if this algorithm will converge? Well, suppose <span class="math inline">\(\theta^{(t)}\)</span> and <span class="math inline">\(\theta^{(t+1)}\)</span> are the parameters from two successive iterations of EM. We will now prove that <span class="math inline">\(l(\theta^{(t)})\le l(\theta^{(t+1)})\)</span>, which shows EM always monotonically improves the log-likelihood. The key to showing this result lies in our choice of the <span class="math inline">\(Q_i\)</span>'s. Specially, on the iteration of EM in which the parameters had started out as <span class="math inline">\(\theta^{(t)}\)</span>, we would have chosen <span class="math inline">\(Q_i^{(t)}(z^{(i)}):=p(z^{(i)}|x^{(i)};\theta^{(t)}).\)</span> We saw earlier that this choice ensures that Jensen's inequality, as applied to get Equation (3), holds with equality, and hence</p>
-<p><span class="math display">\[l(\theta^{(t)})=\sum_i \sum_{z^{(i)}} Q_i^{(t)}(z^{(i)})log \frac{p(x^{(i)},z^{(i)};\theta^{(t)})}{Q_i^{(t)}(z^{(i)})}\]</span> The parameters <span class="math inline">\(\theta^{(t+1)}\)</span> are then obtained by maximizing the right hand side of the equation above. Thus,</p>
-<p><span class="math display">\[
-\begin{align}
-l(\theta^{(t+1)}) &amp;\ge \sum_i \sum_{z^{(i)}} Q_i^{(t)}(z^{(i)})log \frac{p(x^{(i)},z^{(i)};\theta^{(t+1)})}{Q_i^{(t)}(z^{(i)})}\\
-&amp;\ge \sum_i \sum_{z^{(i)}} Q_i^{(t)}(z^{(i)})log \frac{p(x^{(i)},z^{(i)};\theta^{(t)})}{Q_i^{(t)}(z^{(i)})}\\
-&amp;=l(\theta^{(t)})
-\end{align}
-\]</span></p>
-<p>This first inequality comes from the fact that</p>
-<p><span class="math display">\[l(\theta) \ge \sum_i \sum_{z^{(i)}} Q_i(z^{(i)})log \frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})}\]</span></p>
-<p>holds for any values of <span class="math inline">\(Q_i\)</span> and <span class="math inline">\(\theta\)</span>, and in particular holds for <span class="math inline">\(Q_i=Q_i^{(t)}\)</span>, <span class="math inline">\(\theta = \theta^{(t+1)}\)</span>. To get Equation (5), we used the fact that <span class="math inline">\(\theta^{(t+1)}\)</span> is chosen explicitly to be</p>
-<p><span class="math display">\[\mathop{\arg\max}_{\theta} \sum_i \sum_{z^{(i)}} Q_i(z^{(i)})log \frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(i)})}\]</span></p>
-<p>and thus this formula evaluated at <span class="math inline">\(\theta^{(t+1)}\)</span> must be equal to or larger than the same formula evaluated at <span class="math inline">\(\theta^{(t)}\)</span>. Finally, the step used to get (6) was shown earlier, and follows from <span class="math inline">\(Q_i^{(t)}\)</span> having been chosen to make Jensen's inequality hold with equality at <span class="math inline">\(\theta^{(t)}\)</span>. Hence, EM causes the likelihood to converge monotonically. In our description of the EM algorithm, we said we'd run it until convergence. Given the result that we just showed, one reasonable convergence test would be to check if the increase in <span class="math inline">\(l(\theta)\)</span> between successive iterations is smaller than some tolerance parameter, and to declare convergence if EM is improving <span class="math inline">\(l(\theta)\)</span> two slowly.</p>
-<p>Remark. if we define</p>
-<p><span class="math display">\[J(Q,\theta) = \sum_i \sum_{z^{(i)}} Q_i(z^{(i)})log \frac{p(x^{(i)},z^{(i)};\theta)}{Q_i(z^{(    i)})}\]</span></p>
-<p>then we know <span class="math inline">\(l(\theta) \ge J(Q,\theta)\)</span> from our previous derivation. The EM can also be viewed a coordinate ascent on J, in which the E-step maximizes it with respect to Q, and the M-step maximizes it with respect to <span class="math inline">\(\theta\)</span>.</p>
-<h2 id="mixture-of-gaussians">Mixture of Gaussians</h2>
-<p>　　Suppose that we are given a training set <span class="math inline">\(\{x^{(1)},\cdots,x^{(m)}\}\)</span> as usual. Since we are in the unsupervised learning setting, these points do not come with any labels.<br>
-　　We wish to model the data by specifying a joint distribution <span class="math inline">\(p(x^{(i)},z^{(i)})=p(x^{(i)}|z^{(i)})p(z^{(i)})\)</span>. Here, <span class="math inline">\(z^{(i)}\sim\)</span> Multinomial(<span class="math inline">\(\phi\)</span>) (where <span class="math inline">\(\phi \ge 0,\sum_{j=1}^k \phi_j = 1\)</span>, and the parameter <span class="math inline">\(\phi_j\)</span> gives <span class="math inline">\(p(z^{(i)}=j)\)</span>), and <span class="math inline">\(x^{(i)}|z^{(i)}=j \sim \mathcal{N}(\mu_j,\Sigma_j)\)</span>. We let <span class="math inline">\(k\)</span> denote the number of values that the <span class="math inline">\(z^{(i)}\)</span>'s can take on. Thus, our model posits the each <span class="math inline">\(x^{(i)}\)</span> was generated by randomly choosing <span class="math inline">\(z^{(i)}\)</span> from <span class="math inline">\(\{1,\cdots,k\}\)</span>, and then <span class="math inline">\(x^{(i)}\)</span> was generated by randomly choosing <span class="math inline">\(z^{(i)}\)</span> from <span class="math inline">\({1,\cdots,k}\)</span>, and then <span class="math inline">\(x^{(i)}\)</span> was drawn from one of <span class="math inline">\(k\)</span> Gaussains depending on <span class="math inline">\(z^{(i)}\)</span>. This is called the mixture of Gaussians model. Also, note that the <span class="math inline">\(z^{(i)}\)</span>'s are latent random variables, meaning that they're hidden/unobserved. This is what will make our estimation problem difficult.<br>
-　　The parameters of our model are thus <span class="math inline">\(\phi,\mu\)</span> and <span class="math inline">\(\Sigma\)</span>. To estimate them, we can wirte down the likelihood of our data:<br>
-<span class="math display">\[
-\begin{align*}
-l(\phi,\mu,\Sigma)&amp;=\sum_{i=1}^mlogp(x^{(i)};\phi,\mu,\Sigma)\\
-&amp;=\sum_{i=1}^mlog\sum_{z^{(i)}=1}^k p(x^{(i)}|z^{(i)};\mu,\Sigma)p(z^{(i)};\phi)
-\end{align*}
-\]</span> 　　However, if we set to zero the derivatives of this formula with respect to the parameters and try to solve, we'll find that it is not possible to find the maximum likelihood estimates of the parameters in closed form.<br>
-　　The random variables <span class="math inline">\(z^{(i)}\)</span> indicate which of the <span class="math inline">\(k\)</span> Gaussians each <span class="math inline">\(x^{(i)}\)</span> had come from. Note that if we knew what the <span class="math inline">\(z^{(i)}\)</span>'s were, the maximum likelihood problem would have been easy. Specifically, we could then write down the likelihood as<br>
-<span class="math display">\[l(\phi,\mu,\Sigma)=\sum_{i=1}^mlogp(x^{(i)}|z^{(i)};\mu,\Sigma)+logp(z^{(i)};\phi)\]</span> Maximizing this with respect to <span class="math inline">\(\phi,\mu\)</span> and <span class="math inline">\(\Sigma\)</span> gives the parameters:</p>
-<p><span class="math display">\[
-\begin{align*}
-\phi_j &amp;= \frac{1}{m} \sum_{i=1}^m 1\{z^{(i)}=j\}\\
-\mu_j &amp;= \frac{\sum_{i=1}^m 1\{z^{(i)}=j\}x^{(i)}}{\sum_{i=1}^m 1\{z^{(i)}=j\}}\\
-\Sigma_j &amp;= \frac{\sum_{i=1}^m 1\{z^{(i)}=j\}(x^{(i)}-\mu_j)(x^{(i)}-\mu_j)^T}{\sum_{i=1}^m 1\{z^{(i)}=j\}}
-\end{align*}
-\]</span> Indeed, we see that if the <span class="math inline">\(z^{(i)}\)</span>'s were known, then maximum likelihood estimation becomes nearly identical to what we had when estimating the parameters of the Gaussian discriminat analysis model, except that here the <span class="math inline">\(z^{(i)}\)</span>'s playing the role of the class labels.<br>
-　　However, in our density estimation problem, the <span class="math inline">\(z^{(i)}\)</span>'s not known.What can we do?<br>
-　　The EM algorithm is an iterative algorithm that has two main steps. Applied to our problem, in the E-step, it tries to &quot;guess&quot; the values of the <span class="math inline">\(z^{(i)}\)</span>'s. In the M-step, it updates the parameters of our model based on our guesses. Since in the M-step we are pretending that the guesses in the first part were correct, the maximization becomes easy. Here's the algorithm:<br>
-　　Repeat until convergence: {<br>
-　　　(E-step) For each <span class="math inline">\(i,j\)</span>, set<br>
-<span class="math display">\[w_j^{(i)}:=p(z^{(i)}=j|x^{(i)};\phi,\mu,\Sigma)\]</span> 　　　(M-step) Update the parameters:<br>
-<span class="math display">\[
-\begin{align*}
-\phi_j &amp;:= \frac{1}{m}\sum_{i=1}^m w_j^{(i)}\\
-\mu_j &amp;:= \frac{\sum_{i=1}^m w_j^{(i)}x^{(i)}}{\sum_{i=1}^m w_j^{(i)}}\\
-\Sigma_j &amp;:= \frac{\sum_{i=1}^m w_j^{(i)}(x^{(i)}-u_j)(x^{(i)}-u_j)^T}{\sum_{i=1}^m w_j^{(i)}}
-\end{align*}
-\]</span></p>
-<p>　　In the E-step, we calculate the posterior probability of our parameters the <span class="math inline">\(z^{(i)}\)</span>'s, given the <span class="math inline">\(x^{(i)}\)</span> and using the current setting of our parameters. I.e., using Bayes rule,we obtain:</p>
-<p><span class="math display">\[p(z^{(i)}=j|x^{(i)};\phi,\mu,\Sigma)=\frac{p(x^{(i)}|z^{(i)}=j;\mu,\Sigma)p(z^{(i)}=j;\phi)}{\sum_{l=1}^k p(x^{(i)}|z^{(i)}=l;\mu,\Sigma)p(z^{(i)}=l;\phi)}\]</span></p>
-<p>　　Here, <span class="math inline">\(p(x^{(i)}|z^{(i)}=j;\mu,\Sigma)\)</span> is given by evaluating the density of a Gaussian with mean <span class="math inline">\(\mu_j\)</span> and covariance <span class="math inline">\(\Sigma_j\)</span> at <span class="math inline">\(x^{(i)}\)</span>; <span class="math inline">\(p(z^{(i)}=j;\phi)\)</span> is given by <span class="math inline">\(\phi_j\)</span>, and so on. The values <span class="math inline">\(w_j^{(i)}\)</span> calculated in the E-step represent our &quot;soft&quot; guesses for the value of <span class="math inline">\(z^{(i)}\)</span>.<br>
-　　Also, you should constract the update in the M-step with the formulas we had when the <span class="math inline">\(z^{(i)}\)</span>'s were known exactly. They are identical, except that instead of the indicator functions &quot;<span class="math inline">\(1\{z^{(i)}=j\}\)</span>&quot; indicating from which Gaussian each datapoint had come, we now instead have the <span class="math inline">\(w_j^{(i)}\)</span>'s.<br>
-　　The EM-algorithm is also reminiscent of the K-means clustering algorithm, expcept instead of the &quot;hard&quot; cluster assignments <span class="math inline">\(c(i)\)</span>, we instead have the &quot;soft&quot; assignments <span class="math inline">\(w_j^{(i)}\)</span>. Similar to K-means, it is also susceptible to local optima, so reinitializing at several different initial parameters may be a good idea.</p>
-<p>Armed with our general definition of the EM algorithm, let's go back to the example of fitting the parameters <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\Sigma\)</span> in a mixture of Gaussians. The E-step is easy. Following our algorithm derivation above, we simply calculate</p>
-<p><span class="math display">\[w_j^{(i)}=Q_i(z^{(i)}=j)=P(z^{(i)}=j|x^{(i)};\phi,\mu,\Sigma).\]</span></p>
-<p>Here, &quot;<span class="math inline">\(Q_i(z^{(i)}=j)\)</span>&quot; denotes the probability of <span class="math inline">\(z^{(i)}\)</span> taking the value <span class="math inline">\(j\)</span> under the distribution <span class="math inline">\(Q_i\)</span>. Next, in the M-step, we need to maximize, with respect to our parameters <span class="math inline">\(\phi,\mu,\Sigma,\)</span> the equality <span class="math display">\[
-\begin{align}
- \sum_i \sum_{z^{(i)}} Q_i(z^{(i)})&amp;log \frac{p(x^{(i)},z^{(i)};\phi,\mu,\Sigma)}{Q_i(z^{(i)})}\\
-&amp;= \sum_{i=1}^m \sum_{z^{(i)}} Q_i(z^{(i)}=j)log \frac{p(x^{(i)}|z^{(i)}=j;\mu,\Sigma)p(z^{(i)}=j;\phi)}{Q_i(z^{(i)}=j)}\\
-&amp;=\sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}log\frac{\frac{1}{(2\pi)^{n/2}|\Sigma_j|^{1/2}}exp(-\frac{1}{2}(x^{(i)}-\mu_j)^T\Sigma_j^{-1}(x^{(i)}-\mu_j))\dot\phi_j}{w_j^{(i)}}
-\end{align}
-\]</span></p>
-<p>Let's maximize this with respect to <span class="math inline">\(\mu_l\)</span>. If we take the derivative with respect to <span class="math inline">\(\mu_l\)</span>, we find</p>
-<p><span class="math display">\[
-\begin{align}
-\nabla_{\mu_l} \sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}&amp;log\frac{\frac{1}{(2\pi)^{n/2}|\Sigma_j|^{1/2}}exp(-\frac{1}{2}(x^{(i)}-\mu_j)^T\Sigma_j^{-1}(x^{(i)}-\mu_j))\dot\phi_j}{w_j^{(i)}}\\
-&amp;= -\nabla_{\mu_l} \sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}\frac{1}{2}(x^{(i)}-\mu_j)^T\Sigma_j^{-1}(x^{(i)}-\mu_j))\\
-&amp;=\frac{1}{2}\sum_{i=1}^m w_l^{(i)}\nabla_{\mu_l}2\mu_l^T\Sigma_l^{-1}x^{(i)}-\mu_l^T\Sigma_l^{-1}\mu_l\\
-&amp;=\sum_{i=1}^m w_l^{(i)}(\Sigma_l^{-1}x^{(i)}-\Sigma_l^{-1}\mu_l)
-\end{align}
-\]</span></p>
-<p>setting this to zero and solving for <span class="math inline">\(\mu_l\)</span> therefor yields the updata rule</p>
-<p><span class="math display">\[\mu_l := \frac{\sum_{i=1}^m w_l^{(i)}x^{(i)}}{\sum_{i=1}^m w_l^{(i)}}\]</span></p>
-<p>Let's do one more example, and derive the M-step updata for the parameters <span class="math inline">\(\phi_j\)</span>. Grouping together only the terms that depend on <span class="math inline">\(\phi_j\)</span>, we find that we need to maximize</p>
-<p><span class="math display">\[\sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}log\phi_j\]</span></p>
-<p>However, there is an additional constraint that the <span class="math inline">\(\phi_j\)</span>'s sum to 1, since they represent the probabilities <span class="math inline">\(\phi_j = p(z^{(i)}=j;\phi)\)</span>. To deal with the constraint that <span class="math inline">\(\sum_{j=1}^k \phi_j = 1\)</span>, we construct the Lagrangian</p>
-<p><span class="math display">\[L(\phi)=\sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}log\phi_j + \beta(\sum_{j=1}^k \phi_j-1),\]</span></p>
-<p>where <span class="math inline">\(\beta\)</span> is the Lagrange multiplier. Taking derivatives, we find</p>
-<p><span class="math display">\[\frac{\partial}{\partial\phi_j}L(\phi)=\sum_{i=1}^m\frac{w_j^{(i)}}{\phi_j}+1\]</span></p>
-<p>Setting this to zero and solving, we get</p>
-<p><span class="math display">\[\phi_j = \frac{\sum_{i=1}^m w_j^{(i)}}{-\beta}\]</span></p>
-<p>I.e., <span class="math inline">\(\phi_j\propto \sum_{i=1}^m w_j^{(i)}\)</span>.Using the constraint that <span class="math inline">\(\sum_j\phi_j=1\)</span>, we easily find that <span class="math inline">\(-\beta = \sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}=\sum_{i=1}^m 1 = m\)</span>. (This used the fact that <span class="math inline">\(w_j^{(i)}=Q_i(z^{(i)}=j)\)</span>, and since probabilities sum to 1, <span class="math inline">\(\sum_j w_j^{(i)}=1\)</span>.) We therefore have our M-step updates for the parameter <span class="math inline">\(\phi_j\)</span>:</p>
-<p><span class="math display">\[\phi_j := \frac{1}{m}\sum_{i=1}^m w_j^{(i)}\]</span></p>
-<p>The derivation for M-step updates to <span class="math inline">\(\Sigma_j\)</span> are also entirely straightforward.Look at it as below. <span class="math display">\[
-\begin{align*}
-\nabla_{\Sigma_l} \sum_{i=1}^m \sum_{j=1}^k w_j^{(i)}&amp;log\frac{\frac{1}{(2\pi)^{n/2}|\Sigma_j|^{1/2}}exp(-\frac{1}{2}(x^{(i)}-\mu_j)^T\Sigma_j^{-1}(x^{(i)}-\mu_j))\dot\phi_j}{w_j^{(i)}}\\
-&amp;=\nabla_{\Sigma_l}\sum_{i=1}^m\sum_{j=1}^k w_j^{(i)}\left\{-\frac{1}{2}log |\Sigma_j|-\frac{1}{2}(x^{(i)}-\mu_j)^T\Sigma_j^{-1}(x^{(i)}-\mu_j)\right\}\\
-&amp;=\nabla_{\Sigma_l}\sum_{i=1}^m w_l^{(i)}\left\{log|\Sigma_l|+(x^{(i)}-\mu_l)^T\Sigma_l^{-1}(x^{(i)}-\mu_l)\right\}
-\end{align*}
-\]</span> The <span class="math inline">\(|S|\)</span> is the determinant of <span class="math inline">\(S\)</span>, we express it as <span class="math inline">\(det(S)\)</span>. Let <span class="math inline">\(S=\Sigma\)</span>, <span class="math inline">\(y_i=x^{(i)}-\mu_l\)</span>, <span class="math inline">\(J(S)=\sum_{i=1}^m w^{(i)}\left\{log det(S)-y_i^TS^{-1}y_i\right\}, (w^{(i)}&gt;0, y_i \in \mathbb{R}^m, S\in \mathbb{R}^{m \times m})\)</span>.<br>
-We know that <span class="math inline">\(det(S)I = S Adj(S)\)</span>, <span class="math inline">\(\frac{\partial det(S)}{\partial S}=det(S)S^{-1}\)</span>,<span class="math inline">\((S^{-1})^{\prime}=-S^{-1}S^{\prime}S^{-1}\)</span>, <span class="math inline">\(\frac{\partial S}{\partial S}=I\)</span>, you'll find<br>
-<span class="math display">\[ \frac{\partial log det(S)}{\partial S}=\frac{det(S)S^{-1}}{det(S)}=S^{-1}\]</span> <span class="math display">\[\frac{\partial J(S)}{\partial S}=\sum_{i=1}^m w^{(i)}S^{-1}-\sum_{i=1}^m w^{(i)}y_iy_i^T(-S^{-1}IS^{(-1)})=0\]</span> <span class="math display">\[
-\begin{align*}
-\sum_{i=1}^m w^{(i)}S^{-1}&amp;=\sum_{i=1}^m w^{(i)}y_iy_i^TS^{-1}IS^{(-1)}\\
-\sum_{i=1}^m w^{(i)}&amp;=\sum_{i=1}^m w^{(i)}y_iy_i^TS^{-1}\\
-S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
-\end{align*}
-\]</span></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Li Yangang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="gumpfly's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/26/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-26T11:31:29+08:00">
-                2018-08-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/08/26/hello-world/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2018/08/26/hello-world/" class="cy_cmt_count" data-xid="2018/08/26/hello-world/" itemprop="commentsCount" ></span>
+                <a href="/2019/03/30/hello-world/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2019/03/30/hello-world/" class="cy_cmt_count" data-xid="2019/03/30/hello-world/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -883,7 +477,7 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -933,7 +527,7 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

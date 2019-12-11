@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Machine Learning," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="情贵淡，气贵和。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="gumpfly&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="The EM algorithm Suppose we have an estimation problem in which we have a training set \(\{x^{(1)},\cdots,x^{(m)}\}\) consisting of \(m\) independent examples. We wish to fit parameters of a model \(p">
+<meta name="keywords" content="Machine Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EM algorithm">
+<meta property="og:url" content="http://yoursite.com/2019/12/11/EM-algorithm/index.html">
 <meta property="og:site_name" content="gumpfly&#39;s blog">
-<meta property="og:description" content="情贵淡，气贵和。">
+<meta property="og:description" content="The EM algorithm Suppose we have an estimation problem in which we have a training set \(\{x^{(1)},\cdots,x^{(m)}\}\) consisting of \(m\) independent examples. We wish to fit parameters of a model \(p">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-11T12:10:09.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gumpfly&#39;s blog">
-<meta name="twitter:description" content="情贵淡，气贵和。">
+<meta name="twitter:title" content="EM algorithm">
+<meta name="twitter:description" content="The EM algorithm Suppose we have an estimation problem in which we have a training set \(\{x^{(1)},\cdots,x^{(m)}\}\) consisting of \(m\) independent examples. We wish to fit parameters of a model \(p">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/11/EM-algorithm/"/>
 
 
 
 
 
-  <title>gumpfly's blog</title>
+  <title>EM algorithm | gumpfly's blog</title>
   
 
 
@@ -153,8 +155,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -313,9 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/11/EM-algorithm/" itemprop="url">EM algorithm</a></h1>
+          <h1 class="post-title" itemprop="name headline">EM algorithm</h1>
         
 
         <div class="post-meta">
@@ -348,7 +347,7 @@
               </span>
               
                 <a href="/2019/12/11/EM-algorithm/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://yoursite.com/2019/12/11/EM-algorithm/" class="cy_cmt_count" data-xid="2019/12/11/EM-algorithm/" itemprop="commentsCount" ></span>
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2019/12/11/EM-algorithm/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -376,9 +375,7 @@
       
 
       
-        
-          
-            <h2 id="the-em-algorithm">The EM algorithm</h2>
+        <h2 id="the-em-algorithm">The EM algorithm</h2>
 <p>Suppose we have an estimation problem in which we have a training set <span class="math inline">\(\{x^{(1)},\cdots,x^{(m)}\}\)</span> consisting of <span class="math inline">\(m\)</span> independent examples. We wish to fit parameters of a model <span class="math inline">\(p(x,z)\)</span> to the data, where the likelihood is given by</p>
 <p><span class="math display">\[
 \begin{align*}
@@ -513,8 +510,6 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
 \end{align*}
 \]</span></p>
 
-          
-        
       
     </div>
     
@@ -529,14 +524,20 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -546,10 +547,11 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -557,6 +559,15 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -577,8 +588,17 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -633,6 +653,22 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-em-algorithm"><span class="nav-number">1.</span> <span class="nav-text">The EM algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mixture-of-gaussians"><span class="nav-number">2.</span> <span class="nav-text">Mixture of Gaussians</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -779,6 +815,10 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -813,7 +853,18 @@ S&amp;=\frac{\sum_{i=1}^m w^{(i)}y_iy_i^T}{\sum_{i=1}^m w^{(i)}}
 
 
   
-    <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytMIHrjF"></script>
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytMIHrjF';
+      var conf = '5f777710b2378182ffe0b2ec8de599d4';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
   
 
 
